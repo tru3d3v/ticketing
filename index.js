@@ -3,6 +3,14 @@ var path = require('path')
 const app = express()
 const router = express.Router()
 
+
+const userRouter = require("./routes/userRoute");
+
+/**  Controller or Route */
+app.use("/users", userRouter);
+
+/** End of Controller */
+
 // a middleware function with no mount path. This code is executed for every request to the router
 router.use((req, res, next) => {
   next()
