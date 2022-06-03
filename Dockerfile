@@ -16,7 +16,9 @@ RUN mkdir -p /home/app/tmp
 WORKDIR /home/app
 
 COPY public /home/app/public
-COPY index.js /home/app/index.js
+COPY *.js /home/app
+COPY routes /home/app/routes
+COPY services /home/app/services
 COPY package.json /home/app/package.json
 
 ADD entrypoint.sh /home/app/entrypoint.sh
