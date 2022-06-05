@@ -53,3 +53,16 @@ Menu Admin:
 - Manage Movie
 - Manage Studio 
 - Manage Transaction
+
+
+Presentasi:
+- Development practices
+- Arsitektur aplikasi
+- ERD
+- Flowchart
+
+Pembagian tugas:
+- UI (Sendri, david, Agung)
+- PPT slide (sendri)
+- Backend Ronal, Muchlis
+- Jquery Muchlis (Integrasi)
