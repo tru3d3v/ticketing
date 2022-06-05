@@ -1,0 +1,55 @@
+Menu Public:
+- Home
+- About
+- Registrasi
+- Login / Logout
+- User Profile
+  - Transaction History
+
+
+
+Table movie
+- ID Movie
+- Judul movie
+- Deskripsi 
+- Image thumbnail
+- Image large
+- Date Start (long) 
+- Date End (long)
+
+Tabel Manage Studio:
+" Dibuat untuk me mapping filem mana saja yang akan tayang distudio, dalam rentang 3 minggu / satu bulan)"
+" Fungsi tabel ini untuk melihat studio dan sheet yang mana akan dibandingkan dengan transaksi beli tiket yang sudah terverifikasi pembyarannya"
+Jumlah studio 10 (fix)
+Sheet 25
+
+Tabel manage_studio_and_movie:
+- ID Studio
+- ID Movie FK
+- Studio (pilihan studio)
+- Jumlah Sheet
+- Price ticket
+- Start Date (long) 
+- End Date (long)
+
+
+Transaction Table:
+- ID transaksi
+- ID User
+- ID Studio
+- Jumlah tiket
+- Sheet varchar(10): contoh value (1,3,4,6)
+- Amount (RP)
+- File konfirmasi pembyaran
+- order_date (long)
+- confirm_pay_at (long)
+- confirm_by_idadmin (int)
+
+
+Menu Admin:
+
+- Manage User
+- Update password
+- Manage Movie
+- Manage Studio 
+- Manage Transaction

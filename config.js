@@ -7,5 +7,7 @@ const config = {
       database: "ticketing",
     },
     listPerPage: 10,
+    jumlahStudio: 10,
+    jumlahKursi: 25
   };
   module.exports = config;
