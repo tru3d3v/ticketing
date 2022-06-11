@@ -1702,10 +1702,21 @@ ul.arrow {
   .site-footer .colophon {
     padding-top: 30px; }
 
-.email2, .password {
-  margin-left: 10cm;
+.form-outline {
+  width: 30%;
+  margin: auto;
 }
 
-.login-btn {
-  margin-left: 10cm;
+.btn-logreg {
+  width: 15%;
+  background: #ffaa3c;
+  padding: 10px;
+  border-radius: 3px;
+  color: #92601e;
+  margin-left: 42%;
+}
+
+.nav-pills {
+  width: 70%;
+  margin: auto;
 }
