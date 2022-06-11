@@ -1720,3 +1720,24 @@ ul.arrow {
   width: 70%;
   margin: auto;
 }
+
+.nav style {
+  color: black;
+}
+
+.row-prof {
+  margin-left: 95px;
+}
+
+.card-css {
+  width: 550px;
+}
+
+.see-history {
+  margin-left: 210px  ;
+}
+
+.dropdown-menu {
+  padding: 15px;
+  font-size: 16px;
+}
