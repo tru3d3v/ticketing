@@ -1701,3 +1701,11 @@ ul.arrow {
       color: #ffaa3c; }
   .site-footer .colophon {
     padding-top: 30px; }
+
+.email2, .password {
+  margin-left: 10cm;
+}
+
+.login-btn {
+  margin-left: 10cm;
+}
