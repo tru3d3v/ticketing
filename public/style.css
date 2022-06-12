@@ -1701,3 +1701,43 @@ ul.arrow {
       color: #ffaa3c; }
   .site-footer .colophon {
     padding-top: 30px; }
+
+.form-outline {
+  width: 30%;
+  margin: auto;
+}
+
+.btn-logreg {
+  width: 15%;
+  background: #ffaa3c;
+  padding: 10px;
+  border-radius: 3px;
+  color: #92601e;
+  margin-left: 42%;
+}
+
+.nav-pills {
+  width: 70%;
+  margin: auto;
+}
+
+.nav style {
+  color: black;
+}
+
+.row-prof {
+  margin-left: 95px;
+}
+
+.card-css {
+  width: 550px;
+}
+
+.see-history {
+  margin-left: 210px  ;
+}
+
+.dropdown-menu {
+  padding: 15px;
+  font-size: 16px;
+}

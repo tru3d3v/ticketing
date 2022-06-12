@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tru3d3v/ticketing#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "sha1": "^1.1.1"
   }
 }
