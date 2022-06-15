@@ -45,6 +45,13 @@ select,
 textarea {
   font-family: sans-serif; }
 
+.button{
+  width: 500px;
+  font-weight: bold;
+  
+
+}
+
 body {
   margin: 0; }
 
