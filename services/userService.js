@@ -22,8 +22,8 @@ async function createUser(req){
     let name  = req.body.name;
     let email = req.body.email;
     let pass  = req.body.pass; //crypt later
-    let role  = 0;
-    const query = `INSERT INTO users(name, email, password, role) VALUES (${name}, ${email}, ${pass}, ${role})`;
+    let reg_date  = Date.now();
+    const query = `INSERT INTO user(fullname, email, pwd, role) VALUES (${name}, ${email}, ${pass}, ${reg_date})`;
     if (name && email && pass){
       const result = await db.query(query);
       const data = helper.emptyOrRows(result);
@@ -36,7 +36,28 @@ async function createUser(req){
   }
 }
 
+async function loginUser(req){
+  try{
+    let email = req.body.email;
+    let pass  = req.body.pass; //crypt later
+    const query = `SELECT email, pwd FROM user WHERE email = ${email}`;
+    if (email && pass){
+      const result = await db.query(query);
+      if (pass !== result.pwd){
+        return false; // Pass Invalid
+      }
+      const data = helper.emptyOrRows(result);
+      return data;
+    }else{
+      console.log('Data Required');
+    }
+  }catch(error){
+    console.log(error)
+  }
+}
+
 module.exports = {
     getUsers,
-    createUser
+    createUser,
+    loginUser
 }
