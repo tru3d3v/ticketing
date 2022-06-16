@@ -17,6 +17,26 @@ async function getUsers(page = 1){
   }
 }
 
+async function createUser(req){
+  try{
+    let name  = req.body.name;
+    let email = req.body.email;
+    let pass  = req.body.pass; //crypt later
+    let role  = 0;
+    const query = `INSERT INTO users(name, email, password, role) VALUES (${name}, ${email}, ${pass}, ${role})`;
+    if (name && email && pass){
+      const result = await db.query(query);
+      const data = helper.emptyOrRows(result);
+      return data;
+    }else{
+      console.log('Data Required');
+    }
+  }catch(error){
+    console.log(error)
+  }
+}
+
 module.exports = {
-    getUsers
+    getUsers,
+    createUser
 }
