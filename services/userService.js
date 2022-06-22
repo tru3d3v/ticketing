@@ -17,6 +17,15 @@ async function getUsers(page = 1){
   }
 }
 
+async function entryUser(fullname,email,password){
+ 
+  const rows = await db.query(
+    `CALL entryUser(?,?,?,2,@out_value);CALL sp_ReadReturnValue();`,[fullname,email,password]
+  );
+  return helper.emptyOrRows(rows);
+}
+
 module.exports = {
-    getUsers
+    getUsers,
+    entryUser
 }

@@ -1,13 +1,15 @@
 const express = require('express');
 var path = require('path')
 const app = express()
-const router = express.Router()
+app.use(express.json());
+
+//const router = express.Router()
 
 
-const userRouter = require("./routes/userRoute");
+const router = require("./routes/userRoute");
 
 /**  Controller or Route */
-app.use("/users", userRouter);
+app.use("/", router);
 
 /** End of Controller */
 
