@@ -24,4 +24,15 @@ router.post('/register', async function(req, res, next) {
   }
 });
 
+router.post('/login', async function(req, res, next) {
+  try {
+    console.log(req.body);
+    const data = req.body;
+    res.json(await userService.login(data.email,data.password));
+  } catch (err) {
+    console.error(`Error while getting data `, err.message);
+    next(err);
+  }
+});
+
 module.exports = router;
