@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Movie Review | Single</title>
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
+	<title>Movie Review | Single</title>
+
+	<!-- Loading third party fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Loading main css file -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
-	</head>
+</head>
 
 
-	<body>
-		
+<body>
 
-		<div id="site-content">
+	<div class="bg-image" style="background-color: rgba(30, 29, 29, 0.384); height: 200vh">
+		<div id="site-content" style="background-color: rgb(29, 27, 27);">
 			<header class="site-header">
 				<div class="container">
 					<a href="index.html" id="branding">
@@ -45,12 +53,18 @@
 							<li class="menu-item"><a href="joinus.html">Join us</a></li>
 							<li class="menu-item"><a href="contact.html">Contact</a></li>
 							<li class="menu-item"><a href="login.html">Login & Register</a></li>
+							<li class="menu-item">
+								<form class="d-flex input-group w-auto">
+									<input type="search" class="form-control rounded" placeholder="Search"
+										aria-label="Search" aria-describedby="search-addon" />
+									<span class="input-group-text border-0" id="search-addon">
+										<i class="fas fa-search"></i>
+									</span>
+								</form>
+							</li>
 						</ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
-							<input type="text" placeholder="Search...">
-							<button><i class="fa fa-search"></i></button>
-						</form>n><i class="fa fa-search"></i></button>
+
 						</form>
 					</div> <!-- .main-navigation -->
 
@@ -69,15 +83,20 @@
 						<div class="content">
 							<div class="row">
 								<div class="col-md-6">
-									<figure class="movie-poster"><img src="images/posterFilem/aquaman.jpg" alt="#"></figure>
+									<figure class="movie-poster"><img src="images/posterFilem/aquaman.jpg" alt="#"
+											style="border-radius: 20px;">
+									</figure>
 								</div>
 								<div class="col-md-6">
 									<h2 class="movie-title">AQUAMAN</h2>
 									<div class="movie-summary">
 									</div>
 									<ul class="movie-meta">
-										<li><strong>Rating:</strong> 
-											<div class="star-rating" title="Rated 4.00 out of 5"><span style="width:80%"><strong class="rating">4.00</strong> out of 5</span></div>
+										<li><strong>Rating:</strong>
+											<div class="star-rating" title="Rated 4.00 out of 5"><span
+													style="width:80%"><strong class="rating">4.00</strong> out of
+													5</span>
+											</div>
 										</li>
 										<li><strong>Length:</strong> 143 min</li>
 										<li><strong>Premiere:</strong> 22 March 2013 (USA)</li>
@@ -87,30 +106,125 @@
 									<ul class="starring">
 										<li><strong>Directors:</strong> James Wan, Peter Safran</li>
 										<li><strong>Writers:</strong> Geoff Johns, James Wan, Will Beall</li>
-										<li><strong>Stars:</strong> Jason Momoa, Amber Heard, Willem Dafoe, Patrick Wilson, Dolph Lundgren, Yahya Abdul-Mateen II, Nicole Kidman
+										<li><strong>Stars:</strong> Jason Momoa, Amber Heard, Willem Dafoe, Patrick
+											Wilson,
+											Dolph Lundgren, Yahya Abdul-Mateen II, Nicole Kidman
 										</li>
 									</ul>
-									
-									<button type="button" class="button" >Buy Ticket</button>
-									
+
+									<button type="button" class="button" style="width: 600px;">Buy Ticket</button>
+									<br>
+									<br>
+									<div class="row justify-content-around" style="margin-left: 50px;">
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">12:30</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">14:25</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">16:30</label>
+											</div>
+										</div>
+									</div>
+									<br>
+									<div class="row justify-content-around" style="margin-left: 100px;">
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">19:55</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">21:05</label>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div> <!-- .row -->
 							<div class="entry-content">
-								<p>Pada tahun 1985 Maine, penjaga mercusuar Thomas Curry menyelamatkan Atlanna, ratu bangsa bawah laut Atlantis, saat badai. Mereka akhirnya jatuh cinta dan memiliki seorang putra bernama Arthur, yang dilahirkan dengan kekuatan untuk berkomunikasi dengan makhluk laut. Atlanna terpaksa meninggalkan keluarganya dan kembali ke Atlantis, mempercayakan kepada penasihatnya, Nuidis Vulko, dengan misi melatih Arthur. Di bawah bimbingan Vulko, Arthur menjadi seorang pejuang yang terampil tetapi menolak Atlantis setelah mengetahui bahwa Atlanna dieksekusi karena memiliki anak lelaki setengah jenis.</p>
-								<p>Setelah memodifikasi teknologi Orm, David yang sepenuhnya lapis baja mengisi ulang dirinya sebagai Black Manta dan menyergap Arthur dan Mera di Sisilia, dengan sedih melukai Arthur sebelum terlempar dari tebing hingga kematiannya. Mera merawat luka-luka Arthur ketika mereka melakukan perjalanan ke keberadaan trisula, dan mendorongnya untuk merangkul takdirnya sebagai pahlawan. Setiba di tempat tujuan, Arthur dan Mera diserang oleh monster amfibi yang disebut the Trench, tetapi berhasil menangkis mereka dan mencapai lubang cacing yang mengangkut mereka ke laut yang belum dipetakan yang terletak di pusat Bumi. Di sana, mereka secara tak terduga bersatu kembali dengan Atlanna, yang dikorbankan untuk Trench atas kejahatannya tetapi berhasil melarikan diri dan mencapai laut yang belum dipetakan, di mana ia telah terdampar sejak itu.</p>
-								<p>Arthur menghadapi Karathen, seorang leviathan dan penjaga trisula, dan menyuarakan tekadnya untuk melindungi Atlantis dan permukaan, membuktikan nilainya dan merebut kembali trisula, yang memberinya kendali atas tujuh lautan. Orm dan sekutunya memimpin pasukan melawan pasukan krustasea Kerajaan Brine dengan maksud untuk menyelesaikan persiapan pertempuran permukaan Orm. Ketika Orm menyatakan dirinya sebagai Ocean Master, Arthur dan Mera, dengan bantuan Karathen dan Trench, turun tangan dan memimpin pasukan makhluk laut dalam pertempuran melawannya. Pengikut Orm meninggalkan kepatuhan mereka kepadanya dan memeluk Arthur sebagai raja sejati setelah mengetahui bahwa ia memegang trisula. Arthur mengalahkan Orm dalam pertempuran tetapi memilih untuk menyisihkan hidupnya dan Orm menerima nasibnya setelah mengetahui bahwa Arthur telah menemukan dan menyelamatkan Atlanna. Atlanna kembali ke permukaan untuk bersatu kembali dengan Thomas sementara Arthur naik ke tahta dengan Mera di sisinya. Dalam adegan mid-credit, David diselamatkan oleh Dr. Stephen Shin, seorang ilmuwan dan ahli teori konspirasi yang terobsesi dengan Atlantis, dan setuju untuk memimpin Shin di sana sebagai imbalan atas bantuannya dalam balas dendamnya pada Arthur.</p>
+								<p>Pada tahun 1985 Maine, penjaga mercusuar Thomas Curry menyelamatkan Atlanna, ratu
+									bangsa
+									bawah laut Atlantis, saat badai. Mereka akhirnya jatuh cinta dan memiliki seorang
+									putra
+									bernama Arthur, yang dilahirkan dengan kekuatan untuk berkomunikasi dengan makhluk
+									laut.
+									Atlanna terpaksa meninggalkan keluarganya dan kembali ke Atlantis, mempercayakan
+									kepada
+									penasihatnya, Nuidis Vulko, dengan misi melatih Arthur. Di bawah bimbingan Vulko,
+									Arthur
+									menjadi seorang pejuang yang terampil tetapi menolak Atlantis setelah mengetahui
+									bahwa
+									Atlanna dieksekusi karena memiliki anak lelaki setengah jenis.</p>
+								<p>Setelah memodifikasi teknologi Orm, David yang sepenuhnya lapis baja mengisi ulang
+									dirinya sebagai Black Manta dan menyergap Arthur dan Mera di Sisilia, dengan sedih
+									melukai Arthur sebelum terlempar dari tebing hingga kematiannya. Mera merawat
+									luka-luka
+									Arthur ketika mereka melakukan perjalanan ke keberadaan trisula, dan mendorongnya
+									untuk
+									merangkul takdirnya sebagai pahlawan. Setiba di tempat tujuan, Arthur dan Mera
+									diserang
+									oleh monster amfibi yang disebut the Trench, tetapi berhasil menangkis mereka dan
+									mencapai lubang cacing yang mengangkut mereka ke laut yang belum dipetakan yang
+									terletak
+									di pusat Bumi. Di sana, mereka secara tak terduga bersatu kembali dengan Atlanna,
+									yang
+									dikorbankan untuk Trench atas kejahatannya tetapi berhasil melarikan diri dan
+									mencapai
+									laut yang belum dipetakan, di mana ia telah terdampar sejak itu.</p>
+								<p>Arthur menghadapi Karathen, seorang leviathan dan penjaga trisula, dan menyuarakan
+									tekadnya untuk melindungi Atlantis dan permukaan, membuktikan nilainya dan merebut
+									kembali trisula, yang memberinya kendali atas tujuh lautan. Orm dan sekutunya
+									memimpin
+									pasukan melawan pasukan krustasea Kerajaan Brine dengan maksud untuk menyelesaikan
+									persiapan pertempuran permukaan Orm. Ketika Orm menyatakan dirinya sebagai Ocean
+									Master,
+									Arthur dan Mera, dengan bantuan Karathen dan Trench, turun tangan dan memimpin
+									pasukan
+									makhluk laut dalam pertempuran melawannya. Pengikut Orm meninggalkan kepatuhan
+									mereka
+									kepadanya dan memeluk Arthur sebagai raja sejati setelah mengetahui bahwa ia
+									memegang
+									trisula. Arthur mengalahkan Orm dalam pertempuran tetapi memilih untuk menyisihkan
+									hidupnya dan Orm menerima nasibnya setelah mengetahui bahwa Arthur telah menemukan
+									dan
+									menyelamatkan Atlanna. Atlanna kembali ke permukaan untuk bersatu kembali dengan
+									Thomas
+									sementara Arthur naik ke tahta dengan Mera di sisinya. Dalam adegan mid-credit,
+									David
+									diselamatkan oleh Dr. Stephen Shin, seorang ilmuwan dan ahli teori konspirasi yang
+									terobsesi dengan Atlantis, dan setuju untuk memimpin Shin di sana sebagai imbalan
+									atas
+									bantuannya dalam balas dendamnya pada Arthur.</p>
 							</div>
 						</div>
 					</div>
 				</div> <!-- .container -->
 			</main>
-			<footer class="site-footer">
+			<footer class="bg-dark text-center text-white">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
 							<div class="widget">
 								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia
+									nesciunt saepe cupiditate</p>
 							</div>
 						</div>
 						<div class="col-md-2">
@@ -172,14 +286,16 @@
 
 			</footer>
 		</div>
-		<!-- Default snippet for navigation -->
-		
+	</div>
+	<!-- Default snippet for navigation -->
 
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+	<!-- MDB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
 
 </html>

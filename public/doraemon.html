@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Movie Review | Single</title>
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
+	<title>Movie Review | Single</title>
+
+	<!-- Loading third party fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Loading main css file -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
-	</head>
+</head>
 
 
-	<body>
-		
+<body>
 
-		<div id="site-content">
+	<div class="bg-image" style="background-color: rgba(30, 29, 29, 0.384); height: 174vh">
+		<div id="site-content" style="background-color: rgb(29, 27, 27);">
 			<header class="site-header">
 				<div class="container">
 					<a href="index.html" id="branding">
@@ -45,12 +53,18 @@
 							<li class="menu-item"><a href="joinus.html">Join us</a></li>
 							<li class="menu-item"><a href="contact.html">Contact</a></li>
 							<li class="menu-item"><a href="login.html">Login & Register</a></li>
+							<li class="menu-item">
+								<form class="d-flex input-group w-auto">
+									<input type="search" class="form-control rounded" placeholder="Search"
+										aria-label="Search" aria-describedby="search-addon" />
+									<span class="input-group-text border-0" id="search-addon">
+										<i class="fas fa-search"></i>
+									</span>
+								</form>
+							</li>
 						</ul> <!-- .menu -->
 
-						<form action="#" class="search-form">
-							<input type="text" placeholder="Search...">
-							<button><i class="fa fa-search"></i></button>
-						</form>n><i class="fa fa-search"></i></button>
+
 						</form>
 					</div> <!-- .main-navigation -->
 
@@ -69,15 +83,20 @@
 						<div class="content">
 							<div class="row">
 								<div class="col-md-6">
-									<figure class="movie-poster"><img src="images/posterFilem/doraemon.jpg" alt="#"></figure>
+									<figure class="movie-poster"><img src="images/posterFilem/doraemon.jpg" alt="#"
+											style="border-radius: 20px;">
+									</figure>
 								</div>
 								<div class="col-md-6">
 									<h2 class="movie-title"> Doraemon : Nobita's Little Star War </h2>
 									<div class="movie-summary">
 									</div>
 									<ul class="movie-meta">
-										<li><strong>Rating:</strong> 
-											<div class="star-rating" title="Rated 4.00 out of 5"><span style="width:80%"><strong class="rating">4.00</strong> out of 5</span></div>
+										<li><strong>Rating:</strong>
+											<div class="star-rating" title="Rated 4.00 out of 5"><span
+													style="width:80%"><strong class="rating">4.00</strong> out of
+													5</span>
+											</div>
 										</li>
 										<li><strong>Length:</strong> - min</li>
 										<li><strong>Premiere:</strong> - </li>
@@ -87,30 +106,92 @@
 									<ul class="starring">
 										<li><strong>Directors:</strong> Shin Yamaguchi </li>
 										<li><strong>Writers:</strong> Dai Sato </li>
-										<li><strong>Stars:</strong> Wasabi Mizuta,  Megumi Ohara, Yumi Kakazu, Subaru Kimura, Tomokazu Seki 
+										<li><strong>Stars:</strong> Wasabi Mizuta, Megumi Ohara, Yumi Kakazu, Subaru
+											Kimura,
+											Tomokazu Seki
 										</li>
-                
+
 									</ul>
 
-									<button type="button" class="button" >Buy Ticket</button>
-									
+									<button type="button" class="button" style="width: 600px;">Buy Ticket</button>
+									<br>
+									<br>
+									<div class="row justify-content-around" style="margin-left: 50px;">
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">12:30</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">14:25</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">16:30</label>
+											</div>
+										</div>
+									</div>
+									<br>
+									<div class="row justify-content-around" style="margin-left: 100px;">
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">19:55</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">21:05</label>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div> <!-- .row -->
 							<div class="entry-content">
-								<p>Alkisah di luar angkasa ada sebuah planet yang ukurannya kecil bernama Pirika, dengan makhluk alien penghuninya yang juga mini. Ketika sedang liburan musim panas, Nobita tidak sengaja mengambil dan membawa roket kecil berisi sosok alien mini dari planet imut tersebut, yang namanya Papi. </p>
-                                <p>Tentu Doraemon dan Nobita tak tinggal diam. Mereka kemudian menuju ke Planet Pirika dengan alat canggih milik Doraemon lantas bersama-sama berusaha melepaskan Papi dan seluruh rakyat Pirika yang dalam bahaya.  Jody tertinggal, dan Ben memercayai seorang warga untuk mengendarai truk, lalu ia kembali ke zona, dimana ia, Jody, Rinjani, dan Tambora dihabisi oleh beberapa penjaga, termasuk Tubir. Setelah semuanya dibunuh, Hasan datang dan mengatakan bahwa ia adalah dalangnya; ia berganti pihak karena merasa pihak lain lebih santai. Ben membunuhnya dengan pistol, dan mereka segara keluar mengunakkan truk karena Ben yang mengalami pendarahan. Untungnya, mereka tiba di kecamatan terdekat dan Ben dirawat di sebuah Pusat Kesehatan Masyarakat. </p>
+								<p>Alkisah di luar angkasa ada sebuah planet yang ukurannya kecil bernama Pirika, dengan
+									makhluk alien penghuninya yang juga mini. Ketika sedang liburan musim panas, Nobita
+									tidak sengaja mengambil dan membawa roket kecil berisi sosok alien mini dari planet
+									imut
+									tersebut, yang namanya Papi. </p>
+								<p>Tentu Doraemon dan Nobita tak tinggal diam. Mereka kemudian menuju ke Planet Pirika
+									dengan alat canggih milik Doraemon lantas bersama-sama berusaha melepaskan Papi dan
+									seluruh rakyat Pirika yang dalam bahaya. Jody tertinggal, dan Ben memercayai seorang
+									warga untuk mengendarai truk, lalu ia kembali ke zona, dimana ia, Jody, Rinjani, dan
+									Tambora dihabisi oleh beberapa penjaga, termasuk Tubir. Setelah semuanya dibunuh,
+									Hasan
+									datang dan mengatakan bahwa ia adalah dalangnya; ia berganti pihak karena merasa
+									pihak
+									lain lebih santai. Ben membunuhnya dengan pistol, dan mereka segara keluar
+									mengunakkan
+									truk karena Ben yang mengalami pendarahan. Untungnya, mereka tiba di kecamatan
+									terdekat
+									dan Ben dirawat di sebuah Pusat Kesehatan Masyarakat. </p>
 							</div>
 						</div>
 					</div>
 				</div> <!-- .container -->
 			</main>
-			<footer class="site-footer">
+			<br>
+			<footer class="bg-dark text-center text-white">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
 							<div class="widget">
 								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia
+									nesciunt saepe cupiditate</p>
 							</div>
 						</div>
 						<div class="col-md-2">
@@ -172,14 +253,16 @@
 
 			</footer>
 		</div>
-		<!-- Default snippet for navigation -->
-		
+	</div>
+	<!-- Default snippet for navigation -->
 
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+	<!-- MDB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
 
 </html>

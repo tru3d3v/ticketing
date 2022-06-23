@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Movie Review</title>
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-		<!-- Loading main css file -->
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
+	<title>Movie Review</title>
+
+	<!-- Loading third party fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Loading main css file -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
-	</head>
+</head>
 
 
-	<body>
-		
+<body>
 
-		<div id="site-content">
+	<div class="bg-image" style="background-color: rgba(30, 29, 29, 0.384);
+	height: 273vh">
+		<div id="site-content" style="background-color: rgb(29, 27, 27);">
 			<header class="site-header">
 				<div class="container">
 					<a href="index.html" id="branding">
@@ -40,36 +49,28 @@
 					<div class="main-navigation">
 						<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 						<ul class="menu">
-							<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="index.html">Home</a></li>
 							<li class="menu-item"><a href="about.html">About</a></li>
-							<li class="menu-item"><div class="dropdown">
-							<a
-								  class="dropdown-toggle"
-								  role="button"
-								  id="dropdownMenuLink"
-								  data-mdb-toggle="dropdown"
-								  aria-expanded="false"
-								>
-								  Menu
-								</a>
-							  
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								  <a class="dropdown-item" href="profile.html">Profile</a>
-								  <a class="dropdown-item" href="login.html">Login / Register</a>
-								  <div class="dropdown-divider"></div>
-								  <a class="dropdown-item" href="login.html">Logout</a>
-								</ul>
-							  </div></li>
+							<li class="menu-item current-menu-item"><a href="review.html">Movie reviews</a></li>
+							<li class="menu-item"><a href="joinus.html">Join us</a></li>
+							<li class="menu-item"><a href="contact.html">Contact</a></li>
+							<li class="menu-item"><a href="login.html">Login & Register</a></li>
+							<li class="menu-item">
+								<form class="d-flex input-group w-auto">
+									<input type="search" class="form-control rounded" placeholder="Search"
+										aria-label="Search" aria-describedby="search-addon" />
+									<span class="input-group-text border-0" id="search-addon">
+										<i class="fas fa-search"></i>
+									</span>
+								</form>
+							</li>
 						</ul> <!-- .menu -->
-
-						<form action="#" class="search-form">
-							<input type="text" placeholder="Search...">
-							<button><i class="fa fa-search"></i></button>
 						</form>
 					</div> <!-- .main-navigation -->
 
 					<div class="mobile-navigation"></div>
 				</div>
+
 			</header>
 			<main class="main-content">
 				<div class="container">
@@ -78,9 +79,12 @@
 							<div class="col-md-9">
 								<div class="slider">
 									<ul class="slides">
-										<li><a href="doctorStrange.html"><img src="images/posterFilem/docterStrange.jpg" alt="Slide 1"></a></li>
-										<li><a href="aquaman.html"><img src="images/posterFilem/aquaman.jpg" alt="Slide 2"></a></li>
-										<li><a href="KKN-DIDESA-PENARI.html"><img src="images/posterFilem/KKN-DESA-PENARI.jpg" alt="Slide 3"></a></li>
+										<li><a href="doctorStrange.html"><img src="images/posterFilem/docterStrange.jpg"
+													alt="Slide 1"></a></li>
+										<li><a href="aquaman.html"><img src="images/posterFilem/aquaman.jpg"
+													alt="Slide 2"></a></li>
+										<li><a href="KKN-DIDESA-PENARI.html"><img
+													src="images/posterFilem/KKN-DESA-PENARI.jpg" alt="Slide 3"></a></li>
 									</ul>
 								</div>
 							</div>
@@ -88,17 +92,20 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-12">
 										<div class="latest-movie">
-											<a href="theDoll3.html"><img src="images/posterFilem/doll3.jpg" alt="Movie 1"></a>
+											<a href="theDoll3.html"><img src="images/posterFilem/doll3.jpg"
+													alt="Movie 1"></a>
 										</div>
 									</div>
 									<div class="col-sm-6 col-md-12">
 										<div class="latest-movie">
-											<a href="dearNathan.html"><img src="images/posterFilem/dearNathan.jpg" alt="Movie 2"></a>
+											<a href="dearNathan.html"><img src="images/posterFilem/dearNathan.jpg"
+													alt="Movie 2"></a>
 										</div>
 									</div>
 									<div class="col-sm-6 col-md-12">
 										<div class="latest-movie">
-											<a href="dune.html"><img src="images/posterFilem/dune.jpg" alt="Movie 2"></a>
+											<a href="dune.html"><img src="images/posterFilem/dune.jpg"
+													alt="Movie 2"></a>
 										</div>
 									</div>
 								</div>
@@ -112,7 +119,8 @@
 							</div>
 							<div class="col-sm-6 col-md-3">
 								<div class="latest-movie">
-									<a href="shangChi.html"><img src="images/posterFilem/shangChi.jpg" alt="Movie 4"></a>
+									<a href="shangChi.html"><img src="images/posterFilem/shangChi.jpg"
+											alt="Movie 4"></a>
 								</div>
 							</div>
 							<div class="col-sm-6 col-md-3">
@@ -126,11 +134,13 @@
 								</div>
 							</div>
 						</div> <!-- .row -->
-						
+
 						<div class="row">
 							<div class="col-md-4">
 								<h2 class="section-title">December premiere</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt
+									ut labore.</p>
 								<ul class="movie-schedule">
 									<li>
 										<div class="date">16/12</div>
@@ -152,7 +162,9 @@
 							</div>
 							<div class="col-md-4">
 								<h2 class="section-title">November premiere</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt
+									ut labore.</p>
 								<ul class="movie-schedule">
 									<li>
 										<div class="date">16/12</div>
@@ -174,7 +186,9 @@
 							</div>
 							<div class="col-md-4">
 								<h2 class="section-title">October premiere</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor
+									incididunt
+									ut labore.</p>
 								<ul class="movie-schedule">
 									<li>
 										<div class="date">16/12</div>
@@ -198,13 +212,14 @@
 					</div>
 				</div> <!-- .container -->
 			</main>
-			<footer class="site-footer">
+			<footer class="bg-dark text-center text-white">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
 							<div class="widget">
 								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia
+									nesciunt saepe cupiditate</p>
 							</div>
 						</div>
 						<div class="col-md-2">
@@ -266,14 +281,16 @@
 
 			</footer>
 		</div>
-		<!-- Default snippet for navigation -->
-		
+	</div>
+	<!-- Default snippet for navigation -->
 
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+	<!-- MDB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
 
 </html>
