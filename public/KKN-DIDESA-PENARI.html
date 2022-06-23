@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>Movie Review | Single</title>
 
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="style.css">
-		
-		<!--[if lt IE 9]>
+	<title>Movie Review | Single</title>
+
+	<!-- Loading third party fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Loading main css file -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+
+	<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
 
-	</head>
+</head>
 
 
-	<body>
-		
+<body>
 
-		<div id="site-content">
+	<div class="bg-image" style="background-color: rgba(30, 29, 29, 0.384); height: 186vh">
+		<div id="site-content" style="background-color: rgb(29, 27, 27);">
 			<header class="site-header">
 				<div class="container">
 					<a href="index.html" id="branding">
@@ -50,7 +58,6 @@
 						<form action="#" class="search-form">
 							<input type="text" placeholder="Search...">
 							<button><i class="fa fa-search"></i></button>
-						</form>n><i class="fa fa-search"></i></button>
 						</form>
 					</div> <!-- .main-navigation -->
 
@@ -69,15 +76,20 @@
 						<div class="content">
 							<div class="row">
 								<div class="col-md-6">
-									<figure class="movie-poster"><img src="images/posterFilem/KKN-DESA-PENARI.jpg" alt="#"></figure>
+									<figure class="movie-poster"><img src="images/posterFilem/KKN-DESA-PENARI.jpg"
+											alt="#" style="border-radius: 20px;">
+									</figure>
 								</div>
 								<div class="col-md-6">
 									<h2 class="movie-title">KKN DI DESA PENARI</h2>
 									<div class="movie-summary">
 									</div>
 									<ul class="movie-meta">
-										<li><strong>Rating:</strong> 
-											<div class="star-rating" title="Rated 4.00 out of 5"><span style="width:80%"><strong class="rating">4.00</strong> out of 5</span></div>
+										<li><strong>Rating:</strong>
+											<div class="star-rating" title="Rated 4.00 out of 5"><span
+													style="width:80%"><strong class="rating">4.00</strong> out of
+													5</span>
+											</div>
 										</li>
 										<li><strong>Length:</strong> 130 min</li>
 										<li><strong>Premiere:</strong> 22 March 2013 (USA)</li>
@@ -87,17 +99,80 @@
 									<ul class="starring">
 										<li><strong>Directors:</strong> Manoj Punjabi, Awi Suryadi </li>
 										<li><strong>Writers:</strong> Lele Laila, Gerald Mamahit</li>
-										<li><strong>Stars:</strong>  Tissa Biani, Adinda Thomas, Achmad Megantara, Aghniny Haque, Calvin Jeremy, M Fajar Nugraha, Kiki Narendra, Aulia Sarah, Aty Cancer, Diding Boneng, Dewi Sri, Andri Mashadi Trinugraha 
+										<li><strong>Stars:</strong> Tissa Biani, Adinda Thomas, Achmad Megantara,
+											Aghniny
+											Haque, Calvin Jeremy, M Fajar Nugraha, Kiki Narendra, Aulia Sarah, Aty
+											Cancer,
+											Diding Boneng, Dewi Sri, Andri Mashadi Trinugraha
 										</li>
 									</ul>
 
-									<button type="button" class="button" >Buy Ticket</button>
-									
+									<button type="button" class="button" style="width: 600px;">Buy Ticket</button>
+									<br>
+									<br>
+									<div class="row justify-content-around" style="margin-left: 50px;">
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">12:30</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">14:25</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">16:30</label>
+											</div>
+										</div>
+									</div>
+									<br>
+									<div class="row justify-content-around" style="margin-left: 100px;">
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">19:55</label>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="btn-group">
+												<input type="radio" class="btn-check" name="options" id="option1"
+													autocomplete="off" checked />
+												<label class="btn btn-warning" for="option1">21:05</label>
+											</div>
+										</div>
+									</div>
+
 								</div>
 							</div> <!-- .row -->
 							<div class="entry-content">
-								<p>Berawal dari 6 mahasiswa yang melaksanakan KKN di sebuah desa terpencil, Nur (Tissa Biani), Widya (Adinda Thomas), Ayu (Aghniny Haque), Bima (Achmad Megantara), Anton (Calvin Jeremy) dan Wahyu (M. Fajar Nugraha) tidak pernah menyangka kalau desa yang mereka pilih ternyata bukanlah desa biasa. Pak Prabu (Kiki Narendra) sang kepala desa memperingatkan mereka untuk tidak melewati batas gapura terlarang, sebuah gapura yang menuju Tapak Tilas. Tempat misterius itu mungkin ada hubungannya dengan sosok penari cantik yang mulai menganggu. </p>
-								<p>Nur dan juga Widya. Satu persatu mulai merasakan keanehan desa tersebut dan Bima pun mulai berubah sikap. Proker KKN mereka berantakan, tampaknya penghuni ghaib desa tersebut tidak menyukai mereka. Nur akhirnya menemukan fakta mencengangkan bahwa salah satu dari mereka melanggar aturan yang paling fatal di desa tersebut. Teror sosok penari misterius semakin menyeramkan, mereka mencoba meminta bantuan Mbah Buyut (Diding Boneng) dukun setempat, namun sudah terlambat, mereka terancam tidak akan bisa pulang dengan selamat dari desa yang dikenal dengan sebutan desa penari itu. </p>
+								<p>Berawal dari 6 mahasiswa yang melaksanakan KKN di sebuah desa terpencil, Nur (Tissa
+									Biani), Widya (Adinda Thomas), Ayu (Aghniny Haque), Bima (Achmad Megantara), Anton
+									(Calvin Jeremy) dan Wahyu (M. Fajar Nugraha) tidak pernah menyangka kalau desa yang
+									mereka pilih ternyata bukanlah desa biasa. Pak Prabu (Kiki Narendra) sang kepala
+									desa
+									memperingatkan mereka untuk tidak melewati batas gapura terlarang, sebuah gapura
+									yang
+									menuju Tapak Tilas. Tempat misterius itu mungkin ada hubungannya dengan sosok penari
+									cantik yang mulai menganggu. </p>
+								<p>Nur dan juga Widya. Satu persatu mulai merasakan keanehan desa tersebut dan Bima pun
+									mulai berubah sikap. Proker KKN mereka berantakan, tampaknya penghuni ghaib desa
+									tersebut tidak menyukai mereka. Nur akhirnya menemukan fakta mencengangkan bahwa
+									salah
+									satu dari mereka melanggar aturan yang paling fatal di desa tersebut. Teror sosok
+									penari
+									misterius semakin menyeramkan, mereka mencoba meminta bantuan Mbah Buyut (Diding
+									Boneng)
+									dukun setempat, namun sudah terlambat, mereka terancam tidak akan bisa pulang dengan
+									selamat dari desa yang dikenal dengan sebutan desa penari itu. </p>
 							</div>
 						</div>
 					</div>
@@ -109,7 +184,8 @@
 						<div class="col-md-2">
 							<div class="widget">
 								<h3 class="widget-title">About Us</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia
+									nesciunt saepe cupiditate</p>
 							</div>
 						</div>
 						<div class="col-md-2">
@@ -166,19 +242,22 @@
 						</div>
 					</div> <!-- .row -->
 
-					<div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
+					<div class="colophon text-center">Copyright 2014 Company name, Designed by Themezy. All rights
+						reserved</div>
 				</div> <!-- .container -->
 
 			</footer>
 		</div>
-		<!-- Default snippet for navigation -->
-		
+	</div>
+	<!-- Default snippet for navigation -->
 
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
+	<!-- MDB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
 
 </html>
