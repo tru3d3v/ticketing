@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review | Order Summary </title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <script src="js/ie-support/html5.js"></script>
+    <script src="js/ie-support/respond.js"></script>
+</head>
+
+<body>
+    <div style="height: 167vh;">
+        <div id="site-content">
+            <header class="site-header">
+                <div class="container">
+                    <a href="index.html" id="branding">
+                        <img src="images/logo.png" alt="" class="logo">
+                        <div class="logo-copy">
+                            <h1 class="site-title">Company Name</h1>
+                            <small class="site-description">Tagline goes here</small>
+                        </div>
+                    </a> <!-- #branding -->
+
+                    <div class="main-navigation">
+                        <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                        <ul class="menu">
+                            <li class="menu-item"><a href="index.html">Home</a></li>
+                            <li class="menu-item"><a href="about.html">About</a></li>
+                            <li class="menu-item current-menu-item">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle" role="button" id="dropdownMenuLink"
+                                        data-mdb-toggle="dropdown" aria-expanded="false">
+                                        Menu
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" href="profile.html">Profile</a>
+                                        <a class="dropdown-item" href="login.html">Login / Register</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Logout</a>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul> <!-- .menu -->
+
+                        <form action="#" class="search-form">
+                            <input type="text" placeholder="Search...">
+                            <button><i class="fa fa-search"></i></button>
+                        </form>
+                    </div> <!-- .main-navigation -->
+
+                    <div class="mobile-navigation"></div>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="container">
+                    <div class="page">
+                        <div class="breadcrumbs">
+                            <a href="index.html">Home</a>
+                            <span>Order Summary</span>
+                        </div>
+
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <figure class="latest-movie"><img src="images/posterFilem/docterStrange.jpg" alt="#"
+                                            style="border-radius: 20px;">
+                                    </figure>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="movie-title">Doctor Strange</h2>
+                                    <div class="movie-summary">
+                                    </div>
+                                    <ul class="movie-meta">
+                                        <li><strong>Rating:</strong>
+                                            <div class="star-rating" title="Rated 4.00 out of 5"><span
+                                                    style="width:80%"><strong class="rating">4.00</strong> out of
+                                                    5</span>
+                                            </div>
+                                        </li>
+                                        <li><strong>Length:</strong> 126 min</li>
+                                        <li><strong>Premiere:</strong> 22 March 2013 (USA)</li>
+                                        <li><strong>Category:</strong> Action/Fantasy/Adventure</li>
+                                    </ul>
+
+                                    <ul class="starring">
+                                        <li><strong>Directors:</strong> Kevin Feige, Sam Raimi </li>
+                                        <li><strong>Writers:</strong> Michael Waldron, Jade Halley Bartlett</li>
+                                        <li><strong>Stars:</strong> Benedict Cumberbatch, Elizabeth Olsen, Rachel
+                                            McAdams,
+                                            Chiwetel Ejiofor, Benedict Wong, Xochitl Gomez
+                                        </li>
+                                    </ul>
+
+                                    <a href="order.html"><button type="button" class="button" style="width: 600px;">Buy
+                                            Ticket</button></a>
+                                    <br>
+                                    <br>
+                                    <div class="row justify-content-around" style="margin-left: 50px;">
+                                        <div class="col-4">
+                                            <div class="btn-group">
+                                                <input type="radio" class="btn-check" name="options" id="option1"
+                                                    autocomplete="off" checked />
+                                                <label class="btn btn-warning" for="option1">12:30</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="btn-group">
+                                                <input type="radio" class="btn-check" name="options" id="option1"
+                                                    autocomplete="off" checked />
+                                                <label class="btn btn-warning" for="option1">14:25</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="btn-group">
+                                                <input type="radio" class="btn-check" name="options" id="option1"
+                                                    autocomplete="off" checked />
+                                                <label class="btn btn-warning" for="option1">16:30</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row justify-content-around" style="margin-left: 100px;">
+                                        <div class="col-4">
+                                            <div class="btn-group">
+                                                <input type="radio" class="btn-check" name="options" id="option1"
+                                                    autocomplete="off" checked />
+                                                <label class="btn btn-warning" for="option1">19:55</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="btn-group">
+                                                <input type="radio" class="btn-check" name="options" id="option1"
+                                                    autocomplete="off" checked />
+                                                <label class="btn btn-warning" for="option1">21:05</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <!-- .row -->
+                            <div class="entry-content">
+                                <p>America Chavez dan Defender Strange dikejar oleh iblis di dalam ruang antar semesta
+                                    sambil mencari Kitab Vishanti. Strange terbunuh dan Chavez secara tidak sengaja
+                                    membuat
+                                    portal yang membawa dirinya dan mayat Strange menuju Earth-616,[N 1] tempat Strange
+                                    versi semesta tersebut menyelamatkan Chavez dari iblis gurita dengan bantuan dari
+                                    Sorcerer Supreme, Wong. Chavez menjelaskan bahwa iblis tersebut memburunya karena ia
+                                    memiliki kekuatan untuk melakukan perjalanan multisemesta. </p>
+                                <p>Menyadari tanda sihir pada iblis tersebut, Strange meminta bantuan Wanda Maximoff
+                                    tetapi
+                                    menyadari bahwa orang itu bertanggung jawab atas serangan tersebut. Setelah
+                                    memperoleh
+                                    Darkhold dan menjadi Scarlet Witch, Maximoff percaya bahwa mengendalikan kekuatan
+                                    Chavez
+                                    akan memungkinkannya untuk bersatu kembali dengan Billy dan Tommy, anak-anak yang
+                                    diciptakannya selama di Westview.[N 2] Saat Strange menolak menyerahkan Chavez,
+                                    Maximoff
+                                    menyerang Kamar-Taj, dan membunuh banyak penyihir. Chavez secara tidak sengaja
+                                    membawa
+                                    dirinya dan Strange ke Earth-838 sementara Maximoff menggunakan Darkhold untuk
+                                    "dream-walk", mengambil alih rekannya dari Earth-838, yang menjalani kehidupan di
+                                    pinggiran kota dengan Billy dan Tommy. Seorang penyihir yang masih hidup
+                                    mengorbankan
+                                    dirinya untuk menghancurkan Darkhold dan menghentikan dream-walk. Merasa marah,
+                                    Maximoff
+                                    memaksa Wong untuk membawanya ke sebuah kuil di Gunung Wundagore, reruntuhan kuno
+                                    terlarang yang merupakan sumber mantra Darkhold, dan memulai kembali dream-walk.
+                                </p>
+                                <p>Saat mencari bantuan, Strange dan Chavez ditangkap oleh Sorcerer Supreme Earth-838,
+                                    Karl
+                                    Mordo, dan dibawa ke hadapan Illuminati, sebuah kelompok yang terdiri dari Mordo,
+                                    Peggy
+                                    Carter, Blackagar Boltagon, Maria Rambeau, Reed Richards, dan Charles Xavier. Mereka
+                                    menjelaskan bahwa dengan penggunaan sembrono dari Darkhold semesta mereka dalam
+                                    upaya
+                                    untuk mengalahkan Thanos, Strange Earth-838 memicu "inkursi" yang menghancurkan
+                                    semesta.
+                                    Setelah mengalahkan Thanos melalui cara lain, Illuminati mengeksekusi Strange mereka
+                                    untuk mencegahnya menyebabkan lebih banyak kerusakan. Mordo percaya bahwa Strange
+                                    Earth-616 sama berbahayanya, tetapi Maximoff telah tiba dalam tubuh rekannya dari
+                                    Earth-838 sebelum mereka memberikan penilaian. Ia secara brutal membunuh semua
+                                    anggota
+                                    Illuminati kecuali Mordo, yang ditaklukkan oleh Strange sebelum melarikan diri
+                                    bersama
+                                    Chavez. Keduanya melarikan diri dengan bantuan rekan Earth-838 dari mantan tunangan
+                                    Strange Christine Palmer, seorang ilmuwan Illuminati. </p>
+                                <p>Strange, Chavez, dan Palmer memasuki ruang antar semesta untuk menemukan Kitab
+                                    Vishanti,
+                                    antitesis dari Darkhold, tetapi Maximoff muncul dan menghancurkannya. Ia kemudian
+                                    mengambil alih pikiran Chavez, menggunakan kekuatannya untuk mengirim yang lain ke
+                                    alam
+                                    semesta yang hancur oleh inkursi. Kembali di Earth-616, Maximoff memulai mantra
+                                    untuk
+                                    mengambil kekuatan Chavez. Strange mengalahkan Sinister Strange dari semesta yang
+                                    hancur, yang tercemar oleh "Darkhold" dari semestanya, dan menggunakannya untuk
+                                    dream-walk di dalam mayat Strange yang telah meninggal bersama Chavez sebelumnya.
+                                    Dengan
+                                    bantuan Wong, Strange menyelamatkan Chavez dari Maximoff dan mendorong Chavez untuk
+                                    menggunakan kemampuannya. Ia membawa Maximoff ke Earth-838, dan melihat Billy dan
+                                    Tommy
+                                    mundur ketakutan sambil menangisi ibu kandung mereka. Maximoff mengalah dan
+                                    menggunakan
+                                    kekuatannya untuk menjatuhkan Gunung Wundagore, menghancurkan semua salinan Darkhold
+                                    di
+                                    seluruh multisemesta dan tampaknya mengorbankan dirinya sendiri dalam prosesnya.
+                                    Chavez
+                                    mengembalikan Strange dan Palmer ke alam semesta masing-masing.</p>
+                                <p>Beberapa waktu kemudian, Kamar-Taj diperbaiki oleh penyihir yang masih hidup, dengan
+                                    Chavez bergabung, dan melanjutkan pelatihan. Strange membangunkan mata ketiga
+                                    sebagai
+                                    hasil dari penggunaan Darkhold dan dream-walk ke dalam mayat. Dalam adegan
+                                    pertengahan
+                                    kredit, Strange didekati oleh seorang penyihir[N 3] yang memperingatkannya bahwa
+                                    tindakannya telah memicu inkursi yang harus diperbaiki dengan bantuannya. Strange
+                                    mengikutinya ke Dark Dimension. </p>
+                            </div>
+                        </div>
+
+                        <!-- Pills content -->
+                    </div>
+                    <br><br><br><br><br><br>
+                </div>
+            </main>
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="widget">
+                                <h3 class="widget-title">About Us</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia
+                                    nesciunt saepe
+                                    cupiditate</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="widget">
+                                <h3 class="widget-title">Recent Review</h3>
+                                <ul class="no-bullet">
+                                    <li>Lorem ipsum dolor</li>
+                                    <li>Sit amet consecture</li>
+                                    <li>Dolorem respequem</li>
+                                    <li>Invenore veritae</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="widget">
+                                <h3 class="widget-title">Help Center</h3>
+                                <ul class="no-bullet">
+                                    <li>Lorem ipsum dolor</li>
+                                    <li>Sit amet consecture</li>
+                                    <li>Dolorem respequem</li>
+                                    <li>Invenore veritae</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="widget">
+                                <h3 class="widget-title">Join Us</h3>
+                                <ul class="no-bullet">
+                                    <li>Lorem ipsum dolor</li>
+                                    <li>Sit amet consecture</li>
+                                    <li>Dolorem respequem</li>
+                                    <li>Invenore veritae</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="widget">
+                                <h3 class="widget-title">Social Media</h3>
+                                <ul class="no-bullet">
+                                    <li>Facebook</li>
+                                    <li>Twitter</li>
+                                    <li>Google+</li>
+                                    <li>Pinterest</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="widget">
+                                <h3 class="widget-title">Newsletter</h3>
+                                <form action="#" class="subscribe-form">
+                                    <input type="text" placeholder="Email Address">
+                                </form>
+                            </div>
+                        </div>
+                    </div> <!-- .row -->
+
+                    <div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
+                </div> <!-- .container -->
+        </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
