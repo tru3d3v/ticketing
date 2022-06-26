@@ -2,30 +2,7 @@ const db = require('./db');
 const helper = require('../helper');
 const config = require('../config');
 
-const queryUser = `SELECT u.iduser,r.role_name,r.idrole,u.fullname ,u.email ,u.reg_date  FROM user u
-join user_role ur 
-on
-u.iduser  = ur.iduser 
-join role r 
-on
-ur.idrole  = r.idrole`;
-
-async function getUsers(page = 1) {
-  const offset = helper.getOffset(page, config.listPerPage);
-  const rows = await db.query(
-    `SELECT iduser, fullname, email
-    FROM user LIMIT ${offset},${config.listPerPage}`
-  );
-  const data = helper.emptyOrRows(rows);
-  const meta = { page };
-
-  return {
-    data,
-    meta
-  }
-}
-
-async function entryUser(fullname, email, password) {
+async function register(fullname, email, password) {
 
   const rows = await db.query(
     `CALL entryUser(?,?,?,2,@out_value);CALL sp_ReadReturnValue();`, [fullname, email, password]
@@ -220,8 +197,7 @@ async function updateProfileUserByUser(token, fullname, old_email, new_email, cu
 }
 
 module.exports = {
-  getUsers,
-  entryUser,
+  register,
   login,
   logout,
   checkToken,

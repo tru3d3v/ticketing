@@ -7,9 +7,12 @@ app.use(express.json());
 
 
 const router = require("./routes/userRoute");
+const routerAdmin = require("./routes/adminRoute");
 
 /**  Controller or Route */
-app.use("/", router);
+app.use("", router);
+app.use("", routerAdmin);
+
 
 /** End of Controller */
 
