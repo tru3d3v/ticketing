@@ -8,6 +8,7 @@ services:
     environment:
       - MYSQL_DATABASE=ticketing
       - MYSQL_ROOT_PASSWORD=admin
+      - TZ=Asia/Jakarta
     ports:
       - '3306:3306'
     volumes:
