@@ -27,7 +27,7 @@ router.post('/login', async function(req, res, next) {
   }
 });
 
-router.post('/logout', async function(req, res, next) {
+router.get('/logout', async function(req, res, next) {
   try {
    // console.log(req.body);
     const data = req.body;
@@ -38,22 +38,24 @@ router.post('/logout', async function(req, res, next) {
   }
 });
 
-router.post('/checkToken', async function(req, res, next) {
+router.get('/checkToken', async function(req, res, next) {
   try {
    // console.log(req.body);
-    const data = req.body;
-    res.json(await userService.checkToken(data.token));
+  //  const data = req.body;
+    const token =  req.header('token');
+    res.json(await userService.checkToken(token));
   } catch (err) {
     console.error(`Error while getting data `, err.message);
     next(err);
   }
 });
 
-router.post('/viewProfile', async function(req, res, next) {
+router.get('/viewProfile', async function(req, res, next) {
   try {
    // console.log(req.body);
-    const data = req.body;
-    res.json(await userService.viewProfile(data.token));
+   // const data = req.body;
+    const token =  req.header('token');
+    res.json(await userService.viewProfile(token));
   } catch (err) {
     console.error(`Error while getting data `, err.message);
     next(err);
@@ -64,7 +66,8 @@ router.post('/updateProfile', async function(req, res, next) {
   try {
    // console.log(req.body);
     const data = req.body;
-    res.json(await userService.updateProfileUserByUser(data.token,data.fullname,data.old_email,data.new_email,data.current_pwd,data.new_pwd));
+    const token =  req.header('token');
+    res.json(await userService.updateProfileUserByUser(token,data.fullname,data.old_email,data.new_email,data.current_pwd,data.new_pwd));
   } catch (err) {
     console.error(`Error while getting data `, err.message);
     next(err);
