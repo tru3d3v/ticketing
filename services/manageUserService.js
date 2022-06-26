@@ -68,8 +68,9 @@ async function getUsers(page = 1,token) {
 
 }
 
-async function resetPassword(token, new_pwd) {
+async function resetPassword(token,iduser_selected, new_pwd) {
 
+ 
   return db.query(
     `CALL checkToken(?,@out_value);CALL sp_ReadReturnValue();`, [token]
   ).then((result) => {
@@ -89,17 +90,86 @@ async function resetPassword(token, new_pwd) {
   })
     .then(response => {
 
-      return db.query('SELECT iduser FROM login_log WHERE token=?', [token])
+      return db.query('SELECT ll.iduser,m.role_name,r.idrole FROM login_log ll JOIN user_role r ON r.iduser=ll.iduser JOIN role m ON r.idrole=m.idrole WHERE ll.token=?', [token])
         .then(resultLoginLog => {
-          const iduser = resultLoginLog[0] != null ? resultLoginLog[0].iduser : 0;
-          return iduser;
-        }).then(iduser => {
-          return db.query('UPDATE user SET pwd=MD5(?) WHERE iduser=?', [new_pwd, iduser])
-            .then(user => {
+          const roleUser = resultLoginLog[0] != null ? resultLoginLog[0] : 0;
+          return roleUser;
+        }).then(roleUser => {
 
-              response.data = user;
-              return response;
+          if (roleUser.role_name == 'administrator') {
+            
+            return db.query(
+               `UPDATE user SET pwd=MD5(?) WHERE iduser=?`,[new_pwd,iduser_selected]
+            ).then(rows => {
+              return {
+                message: 'password reset sukses!',
+                data:rows
+              }
             });
+
+
+          } else {
+            return {
+              message: 'you dont have authorize',
+              data:[]
+            }
+          }
+
+
+        });
+
+    });
+
+}
+
+async function updateUser(token,iduser_selected, idrole, fullname,activation) {
+
+ 
+  return db.query(
+    `CALL checkToken(?,@out_value);CALL sp_ReadReturnValue();`, [token]
+  ).then((result) => {
+    var jsonResponse = { "message": "", "data": {} };
+    const responseToken = result[1][0].ret_value;
+    if (responseToken == token) {
+      jsonResponse.data = {};
+      jsonResponse.message = '';
+    } else {
+      jsonResponse.message = responseToken;
+    }
+    return jsonResponse;
+
+  }).catch((err) => {
+    !error.logged && console.error(err);
+    res.status(500).send();
+  })
+    .then(response => {
+
+      return db.query('SELECT ll.iduser,m.role_name,r.idrole FROM login_log ll JOIN user_role r ON r.iduser=ll.iduser JOIN role m ON r.idrole=m.idrole WHERE ll.token=?', [token])
+        .then(resultLoginLog => {
+          const roleUser = resultLoginLog[0] != null ? resultLoginLog[0] : 0;
+          return roleUser;
+        }).then(roleUser => {
+
+          if (roleUser.role_name == 'administrator') {
+            
+            return db.query(
+               `UPDATE user SET fullname=?, activation=?, modified_date=CURRENT_TIMESTAMP(),modifyBy=? WHERE iduser=?; UPDATE user_role SET idrole=?,modified_date=CURRENT_TIMESTAMP(),modifyBy=?  WHERE iduser=?`,[fullname,activation,roleUser.iduser, iduser_selected,idrole,roleUser.iduser,iduser_selected]
+            ).then(rows => {
+              return {
+                message: 'data sukses diupdate!',
+                data:rows
+              }
+            });
+
+
+          } else {
+            return {
+              message: 'you dont have authorize',
+              data:[]
+            }
+          }
+
+
         });
 
     });
@@ -109,5 +179,6 @@ async function resetPassword(token, new_pwd) {
 
 module.exports = {
   getUsers,
-  resetPassword
+  resetPassword,
+  updateUser
 }
