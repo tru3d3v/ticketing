@@ -2,11 +2,16 @@ const db = require('./db');
 const helper = require('../helper');
 const config = require('../config');
 
-async function register(fullname, email, password) {
-
-  const rows = await db.query(
+async function register(fullname, email, password,idrole) {
+  var rows = null;
+  if(idrole>0){
+     rows = await db.query(
+      `CALL entryUser(?,?,?,?,@out_value);CALL sp_ReadReturnValue();`, [fullname, email, password,idrole]
+    );
+  }else{
+   rows = await db.query(
     `CALL entryUser(?,?,?,2,@out_value);CALL sp_ReadReturnValue();`, [fullname, email, password]
-  );
+  );}
   return helper.emptyOrRows(rows);
 }
 
