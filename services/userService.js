@@ -2,12 +2,61 @@ const db = require('./db');
 const helper = require('../helper');
 const config = require('../config');
 
-async function register(fullname, email, password,idrole) {
+async function register(fullname, email, password,idrole,token) {
   var rows = null;
   if(idrole>0){
-     rows = await db.query(
-      `CALL entryUser(?,?,?,?,@out_value);CALL sp_ReadReturnValue();`, [fullname, email, password,idrole]
-    );
+    ///
+    return db.query(
+      `CALL checkToken(?,@out_value);CALL sp_ReadReturnValue();`, [token]
+    ).then((result) => {
+      var jsonResponse = { "message": "", "data": {} };
+      const responseToken = result[1][0].ret_value;
+      if (responseToken == token) {
+        jsonResponse.data = {};
+        jsonResponse.message = '';
+      } else {
+        jsonResponse.message = responseToken;
+      }
+      return jsonResponse;
+  
+    }).catch((err) => {
+      !error.logged && console.error(err);
+      res.status(500).send();
+    })
+      .then(response => {
+  
+        return db.query('SELECT ll.iduser,m.role_name,r.idrole FROM login_log ll JOIN user_role r ON r.iduser=ll.iduser JOIN role m ON r.idrole=m.idrole WHERE ll.token=?', [token])
+          .then(resultLoginLog => {
+            const roleUser = resultLoginLog[0] != null ? resultLoginLog[0] : 0;
+            return roleUser;
+          }).then(roleUser => {
+  
+            if (roleUser.role_name == 'administrator') {
+              
+             
+              return db.query(
+                `CALL entryUser(?,?,?,?,@out_value);CALL sp_ReadReturnValue();`, [fullname, email, password,idrole]
+              ).then(rows => {
+                return {
+                  message: rows[1][0].ret_value,
+                  data:rows[0]
+                }
+              });v
+  
+  
+            } else {
+              return {
+                message: 'you dont have authorize',
+                data:[]
+              }
+            }
+  
+  
+          });
+  
+      });
+
+
   }else{
    rows = await db.query(
     `CALL entryUser(?,?,?,2,@out_value);CALL sp_ReadReturnValue();`, [fullname, email, password]

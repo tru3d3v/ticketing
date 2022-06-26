@@ -9,8 +9,9 @@ router.post('/register', async function(req, res, next) {
   try {
     //console.log(req.body);
     const data = req.body;
+    const token =  req.header('token');
     const idrole = data.idrole==undefined ? 0 : data.idrole;
-    res.json(await userService.register(data.fullname,data.email,data.password,idrole));
+    res.json(await userService.register(data.fullname,data.email,data.password,idrole,token));
   } catch (err) {
     console.error(`Error while getting data `, err.message);
     next(err);
