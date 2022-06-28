@@ -6,6 +6,7 @@ const upload = multer({ dest: 'uploads/' })
 const fs = require('fs');
 const mnguserService = require('../services/manageUserService');
 const movieService = require('../services/movieService');
+const studioService = require('../services/studioService');
 
 
 router.get('/admin/listOfUsers', async function (req, res, next) {
@@ -121,6 +122,42 @@ router.post('/admin/listMovie', async function (req, res, next) {
     const data = req.body;
     console.log('header token:' + token);
     res.json(await movieService.listMovie(token, data.judul, data.start_date, data.end_date));
+
+  } catch (err) {
+    console.error(`Error while getting data `, err.message);
+    next(err);
+  }
+});
+router.post('/admin/entryStudio', async function (req, res, next) {
+  try {
+    const token = req.header('token');
+    const data = req.body;
+    console.log('header token:' + token);
+    res.json(await studioService.entryStudio(token, data.idmovie, data.studio_label, data.jumlah_sheet, data.price, data.start_date, data.end_date,data.comming_soon));
+
+  } catch (err) {
+    console.error(`Error while getting data `, err.message);
+    next(err);
+  }
+});
+router.post('/admin/updateStudio', async function (req, res, next) {
+  try {
+    const token = req.header('token');
+    const data = req.body;
+    console.log('header token:' + token);
+    res.json(await studioService.updateStudio(token,data.studio_id, data.idmovie, data.studio_label, data.jumlah_sheet, data.price, data.start_date, data.end_date,data.comming_soon));
+
+  } catch (err) {
+    console.error(`Error while getting data `, err.message);
+    next(err);
+  }
+});
+router.post('/admin/listOfStudio', async function (req, res, next) {
+  try {
+    const token = req.header('token');
+    const data = req.body;
+    console.log('header token:' + token);
+    res.json(await studioService.listOfStudio(token, data.idmovie, data.studio_label,  data.start_date, data.end_date,data.comming_soon));
 
   } catch (err) {
     console.error(`Error while getting data `, err.message);
