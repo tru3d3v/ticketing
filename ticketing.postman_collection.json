@@ -353,17 +353,16 @@
 						{
 							"key": "photos",
 							"type": "file",
-							"src": "/Users/macpro/Documents/klikBCA Individual Save Page-ke CIMB NIAGA.pdf"
+							"src": "/Users/macpro/Desktop/Screen Shot 2022-06-27 at 19.41.48.png"
 						},
 						{
 							"key": "photos",
 							"type": "file",
-							"src": "/Users/macpro/Documents/klikBCA Individual Save Page-OVER-KREDIT#2.pdf",
-							"disabled": true
+							"src": "/Users/macpro/Desktop/Screen Shot 2022-06-21 at 14.01.10.png"
 						},
 						{
 							"key": "judul",
-							"value": "judul",
+							"value": "judul2",
 							"type": "default"
 						},
 						{
@@ -516,6 +515,111 @@
 					"path": [
 						"admin",
 						"listMovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/admin/entryStudio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "30246b88-f563-11ec-867b-0242ac120002",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idmovie\":5,\n    \"studio_label\":\"Studio 2\",\n    \"jumlah_sheet\":20,\n    \"price\":45000,\n    \"start_date\":20220101,\n    \"end_date\":20220630,\n    \"comming_soon\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/entryStudio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"entryStudio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/admin/updateStudio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "30246b88-f563-11ec-867b-0242ac120002",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"studio_id\":1,\n    \"idmovie\":5,\n    \"studio_label\":\"Studio ubah 1\",\n    \"jumlah_sheet\":20,\n    \"price\":45000,\n    \"start_date\":20220101,\n    \"end_date\":20220630,\n    \"comming_soon\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/updateStudio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"updateStudio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/admin/listOfStudio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "30246b88-f563-11ec-867b-0242ac120002",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idmovie\":5,\n    \"studio_label\":\"Studio 2\",\n    \"start_date\":20220101,\n    \"end_date\":20220630,\n    \"comming_soon\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/listOfStudio",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"listOfStudio"
 					]
 				}
 			},
