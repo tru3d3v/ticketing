@@ -177,6 +177,7 @@ async function updateUser(token,iduser_selected, idrole, fullname,activation) {
 }
 
 
+
 module.exports = {
   getUsers,
   resetPassword,
