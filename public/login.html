@@ -33,12 +33,25 @@
         </div>
       </header>
       <main class="main-content">
+
         <div class="container">
           <div class="page">
             <div class="breadcrumbs">
               <a href="index.html">Home</a>
               <span>Login / Register</span>
             </div>
+            
+            <div class="message_box" style="position:center">
+              <button class="close" aria-label="Close">✕</button>
+              <div class="m-content">
+                <p class="m-message"></p>
+              </div>
+            </div>
+
+            <div class="loader">
+              <!-- content here -->
+            </div>
+
             <!-- Pills navs -->
             <ul class="nav nav-pills nav-justified mb-4" id="ex1" role="tablist">
               <li class="nav-item" role="presentation">
@@ -59,8 +72,8 @@
                 <form>
                   <!-- Email input -->
                   <div class="form-outline mb-4">
-                    <input type="email" id="loginName" class="form-control" />
-                    <label class="form-label" for="loginName">Email</label>
+                    <input type="email" id="loginEmail" class="form-control" />
+                    <label class="form-label" for="loginEmail">Email</label>
                   </div>
 
                   <!-- Password input -->
@@ -70,7 +83,7 @@
                   </div>
                   <br>
                   <!-- Submit button -->
-                  <button type="submit" class="btn btn-logreg mb-3" id="btn-login">Login</button>
+                  <button type="button" class="btn btn-logreg mb-3" id="btn-login">Login</button>
                 </form>
               </div>
               <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
@@ -78,25 +91,32 @@
                   <!-- Name input -->
                   <div class="form-outline mb-4">
                     <input type="text" id="registerNamaLengkap" class="form-control" />
-                    <label class="form-label">Nama Lengkap</label>
+                    <label class="form-label">Full Name</label><h5 id="namalengkapInvalid" style="color: red;">
+                      * Full name is missing
+                  </h5>
                   </div>
 
                   <!-- Email input -->
                   <div class="form-outline mb-4">
                     <input type="email" id="registerEmail" class="form-control" />
-                    <label class="form-label">Email</label>
+                    <label class="form-label">Email</label> <small id="emailInvalid" class="form-text
+                    text-muted invalid-feedback">
+                            Your email must be a valid email
+                        </small>
                   </div>
-
-
 
                   <div class="form-outline mb-3">
                     <input type="password" id="registerPassword" class="form-control" />
-                    <label class="form-label">Password</label>
+                    <label class="form-label">Password</label><h5 id="pwdInvalid" style="color: red;">
+                      * Password is missing
+                  </h5>
                   </div>
 
                   <div class="form-outline mb-3">
                     <input type="password" id="registerRepassword" class="form-control" />
-                    <label class="form-label">Repeat Password</label>
+                    <label class="form-label">Repeat Password</label><h5 id="rePwdfInvalid" style="color: red;">
+                      * Re Password is missing
+                  </h5>
                   </div>
 
                   <!-- Submit button -->
@@ -178,52 +198,14 @@
     </div>
     </footer>
   </div>
+  <script src="js/js.cookie.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/app.js"></script>
-  <script>
-    function daftar(namaLengkap, email, password, repeatpassword) {
-      //console.log('Hallo ini saya pangil dari dalam fungsi', namaLengkap);
-      //ngelempar langsung ke url
-      //alert('ini saya akan lempar ke halaman menu utama');
-      //document.location.href = 'index.html';
+  <script src="js/register.js"></script>
+  <script src="js/login.js"></script>
 
-      //alert('ini akan saya sembunyikan tab login');
-      //var containerlogin = $('#pills-login');
-      //containerlogin.hide();
-      //var tablogin = $('#tab-login');
-      //tablogin.hide();
-
-      console.log('halo ini saya akan mangil ke sarver yah');
-
-
-
-
-    }
-
-    $(document).ready(function () {
-      $("#tombolDaftar").click(function () {
-        //console.log('halo ko david');
-        var namaLengkap = $('#registerNamaLengkap');
-        var email = $('#registerEmail');
-        var password = $('#registerpassword');
-        var repeatpassword = $('#registerRepassword');
-        //console.log(namaLengkap);
-        //console.log('ini akan saya hilangkan Objek register nama lengkap');
-        //namaLengkap.hide();
-        //console.log('mendapatkan value dari sebuah inputan;', namaLengkap.val());
-
-        //daftar(namaLengkap.val(), email.val(), password.val(), repeatpassword.val());
-
-        if (this.namaLengkap == "") {
-          console.log('Isi Nama Lengkap anda terlebih dahulu ');
-        }
-
-
-      });
-    });
-  </script>
 </body>
 
 </html>
