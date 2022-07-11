@@ -77,34 +77,30 @@
                 <form>
                   <!-- Name input -->
                   <div class="form-outline mb-4">
-                    <input type="text" id="namaDepan" class="form-control" />
-                    <label class="form-label" for="namaDepan">Nama Depan</label>
-                  </div>
-
-                  <!-- Username input -->
-                  <div class="form-outline mb-4">
-                    <input type="text" id="namaBelakang" class="form-control" />
-                    <label class="form-label" for="namaBelakang">Nama Belakang</label>
+                    <input type="text" id="registerNamaLengkap" class="form-control" />
+                    <label class="form-label">Nama Lengkap</label>
                   </div>
 
                   <!-- Email input -->
                   <div class="form-outline mb-4">
                     <input type="email" id="registerEmail" class="form-control" />
-                    <label class="form-label" for="registerEmail">Email</label>
+                    <label class="form-label">Email</label>
                   </div>
 
-                  <div class="form-outline mb-4">
-                    <input type="tel" id="nomorTel" class="form-control" />
-                    <label class="form-label" for="nomorTel">Nomor Telepon</label>
-                  </div>
+
 
                   <div class="form-outline mb-3">
                     <input type="password" id="registerPassword" class="form-control" />
-                    <label class="form-label" for="registerPassword">Password</label>
+                    <label class="form-label">Password</label>
+                  </div>
+
+                  <div class="form-outline mb-3">
+                    <input type="password" id="registerRepassword" class="form-control" />
+                    <label class="form-label">Repeat Password</label>
                   </div>
 
                   <!-- Submit button -->
-                  <button type="submit" class="btn btn-logreg mb-3">Daftar</button>
+                  <button type="button" class="btn btn-logreg mb-3" id="tombolDaftar">Daftar</button>
                 </form>
               </div>
             </div>
@@ -186,6 +182,48 @@
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    function daftar(namaLengkap, email, password, repeatpassword) {
+      //console.log('Hallo ini saya pangil dari dalam fungsi', namaLengkap);
+      //ngelempar langsung ke url
+      //alert('ini saya akan lempar ke halaman menu utama');
+      //document.location.href = 'index.html';
+
+      //alert('ini akan saya sembunyikan tab login');
+      //var containerlogin = $('#pills-login');
+      //containerlogin.hide();
+      //var tablogin = $('#tab-login');
+      //tablogin.hide();
+
+      console.log('halo ini saya akan mangil ke sarver yah');
+
+
+
+
+    }
+
+    $(document).ready(function () {
+      $("#tombolDaftar").click(function () {
+        //console.log('halo ko david');
+        var namaLengkap = $('#registerNamaLengkap');
+        var email = $('#registerEmail');
+        var password = $('#registerpassword');
+        var repeatpassword = $('#registerRepassword');
+        //console.log(namaLengkap);
+        //console.log('ini akan saya hilangkan Objek register nama lengkap');
+        //namaLengkap.hide();
+        //console.log('mendapatkan value dari sebuah inputan;', namaLengkap.val());
+
+        //daftar(namaLengkap.val(), email.val(), password.val(), repeatpassword.val());
+
+        if (this.namaLengkap == "") {
+          console.log('Isi Nama Lengkap anda terlebih dahulu ');
+        }
+
+
+      });
+    });
+  </script>
 </body>
 
 </html>
