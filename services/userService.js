@@ -117,7 +117,7 @@ async function viewProfile(token) {
           const iduser = resultLoginLog[0] != null ? resultLoginLog[0].iduser : 0;
           return iduser;
         }).then(iduser => {
-          return db.query('SELECT iduser,email,activation,reg_date FROM user WHERE iduser=?', [iduser])
+          return db.query('SELECT iduser,fullName,email,activation,reg_date FROM user WHERE iduser=?', [iduser])
             .then(user => {
               const currentUser = user[0];
 

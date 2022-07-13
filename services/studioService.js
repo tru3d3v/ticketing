@@ -174,7 +174,7 @@ async function updateStudio(token, studio_id,idmovie, studio_label, jumlah_sheet
 
 }
 
-async function listOfStudio(token, idmovie, studio_label,start_date, end_date,comming_soon) {
+async function listOfStudio(token, idmovie, studio_label,start_date, end_date,comming_soon,limit) {
 
 
     return db.query(
@@ -249,6 +249,13 @@ async function listOfStudio(token, idmovie, studio_label,start_date, end_date,co
                             paramUpdates.push(comming_soon);
                         }
 
+                        if(limit>0){
+                            
+                            whereQuery += ` LIMIT ? `;
+                            paramUpdates.push(limit);
+                        }
+
+                     
 
 
                         return db.query(
@@ -275,8 +282,87 @@ async function listOfStudio(token, idmovie, studio_label,start_date, end_date,co
 
 }
 
+
+async function publicListMovie(token, idmovie, studio_label,start_date, end_date,comming_soon,limit) {
+
+
+   
+
+           
+                        
+                        var whereQuery = `WHERE `;
+                        var paramUpdates = [];
+
+                        if(idmovie>0){
+                            if (paramUpdates.length > 0) {
+                                whereQuery += ` AND `;
+                            }
+                            whereQuery += ` s.idmovie=? `;
+                            paramUpdates.push(idmovie);
+                        }
+                    
+                        if (studio_label.length > 0) {
+                            if (paramUpdates.length > 0) {
+                                whereQuery += ` AND `;
+                            }
+                            whereQuery += ` s.studio_label=? `;
+                            paramUpdates.push(studio_label);
+                        }
+
+                        
+
+                        if (start_date > -1) {
+                            if (paramUpdates.length > 0) {
+                                whereQuery += ` AND `;
+                            }
+                            whereQuery += ` s.start_date>=? `;
+                            paramUpdates.push(start_date);
+                        }
+
+                        if (end_date > -1) {
+                            if (paramUpdates.length > 0) {
+                                whereQuery += ` AND `;
+                            }
+                            whereQuery += ` s.end_date <=? `;
+                            paramUpdates.push(end_date);
+                        }
+
+                        if (comming_soon > -1) {
+                            if (paramUpdates.length > 0) {
+                                whereQuery += ` AND `;
+                            }
+                            whereQuery += ` s.comming_soon=? `;
+                            paramUpdates.push(comming_soon);
+                        }
+
+                        if(limit>0){
+                            
+                            whereQuery += ` LIMIT ? `;
+                            paramUpdates.push(limit);
+                        }
+
+                     
+
+
+                        return db.query(
+                            `SELECT s.*,m.* FROM studio s JOIN movie m ON m.idmovie=s.idmovie ` +whereQuery,paramUpdates
+                        ).then(rows => {
+                            return {
+                                message: '',
+                                data: rows
+                            }
+                        });
+
+
+                    
+
+       
+
+}
+
 module.exports = {
     entryStudio,
     updateStudio,
-    listOfStudio
+    listOfStudio,
+    publicListMovie
 }

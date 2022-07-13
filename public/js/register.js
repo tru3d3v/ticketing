@@ -111,7 +111,7 @@ $(document).ready(function () {
             console.log('valid');
             var namaLengkap = $('#registerNamaLengkap');
             var email = $('#registerEmail');
-            var password = $('#registerpassword');
+            var password = $('#registerPassword');
 
             $.ajax({
                 url: '/register',
