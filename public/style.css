@@ -1568,6 +1568,7 @@ ul.arrow {
         color: #84878d; }
 
 .no-bullet {
+  color: grey;
   list-style: none; }
 
 .leading {
@@ -1758,4 +1759,8 @@ ul.arrow {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   padding-left: 120px;
   padding-right: 120px;
+}
+
+.btn-screen {
+  margin-left: 305px;
 }
