@@ -8,10 +8,12 @@ app.use(express.json());
 
 const router = require("./routes/userRoute");
 const routerAdmin = require("./routes/adminRoute");
+const publicRote = require("./routes/publicRoute");
 
 /**  Controller or Route */
 app.use("", router);
 app.use("", routerAdmin);
+app.use("", publicRote);
 
 
 /** End of Controller */

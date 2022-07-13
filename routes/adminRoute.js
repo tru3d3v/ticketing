@@ -157,7 +157,7 @@ router.post('/admin/listOfStudio', async function (req, res, next) {
     const token = req.header('token');
     const data = req.body;
     console.log('header token:' + token);
-    res.json(await studioService.listOfStudio(token, data.idmovie, data.studio_label,  data.start_date, data.end_date,data.comming_soon));
+    res.json(await studioService.listOfStudio(token, data.idmovie, data.studio_label,  data.start_date, data.end_date,data.comming_soon,data.limit));
 
   } catch (err) {
     console.error(`Error while getting data `, err.message);
